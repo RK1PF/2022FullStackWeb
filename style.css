@@ -1,0 +1,81 @@
+:root{
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Poppins:wght@400;700;900&display=swap');
+    font-family: 'Poppins', sans-serif;
+    --ff-italic: 'Montserrat', sans-serif;
+    --clr-primary: #9C060C;
+    --clr-secondary: #610F2A;
+    --clr-accent: #FFA15E;
+}
+body, a {
+    all: unset;
+    background-color: var(--clr-secondary);
+    color: var(--clr-accent);
+}
+a {
+    cursor: pointer;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.container-fluid{
+    width: 100%;
+    margin: 0 auto;
+}
+/********************* 
+*   Alignements
+**********************/
+.wrap{
+    flex-wrap: wrap;
+} 
+.df {
+  display: flex;
+}
+.aic {
+  align-items: center;
+}
+.jcc {
+  justify-content: center;
+}
+.gap {
+  gap: 2rem;
+}
+.dBlock {
+    display: block;
+}
+.dNone {
+    display: none;
+}
+.mb1 {
+    margin-bottom: 1em;
+}
+.mb2 {
+    margin-bottom: 2em;
+}
+.mb3 {
+    margin-bottom: 4em;
+}
+/********************* 
+*   Ha jolie
+**********************/
+.bigText {
+    font-size: 8em;
+} 
+.tac {
+    text-align: center;
+}
+.thinText {
+    font-family: var(--ff-italic);
+}
+.navbar {
+    display: flex;
+    background-color: var(--clr-primary);
+}
+/********************* 
+*   ID's
+**********************/
+#jsOut {
+    width: 100%;
+    min-height: 10vh;
+    background-color: var(--clr-primary);
+}
