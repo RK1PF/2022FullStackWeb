@@ -1,0 +1,42 @@
+:root {
+  --clr-primary: #9c060c;
+  --clr-secondary: #49222f;
+  --clr-accent: #ffa15e;
+}
+.a {
+  background-image: url("./drumKitSrc/images/crash.png");
+}
+.z {
+  background-image: url("./drumKitSrc/images/kick.png");
+}
+.e {
+  background-image: url("./drumKitSrc/images/snare.png");
+}
+.r {
+  background-image: url("./drumKitSrc/images/tom1.png");
+}
+.t {
+  background-image: url("./drumKitSrc/images/tom2.png");
+}
+.y {
+  background-image: url("./drumKitSrc/images/tom3.png");
+}
+.u {
+  background-image: url("./drumKitSrc/images/tom4.png");
+}
+.i {
+  background-image: url("./drumKitSrc/images/crash.png");
+}
+.drums {
+  max-width: 11rem;
+  max-height: 11rem;
+  min-width: 8rem;
+  min-height: 8rem;
+  font-size: 5em;
+  font-weight: 900;
+  background-color: var(--clr-primary);
+  /* background-clip: text; */
+  color: var(--clr-accent);
+  text-shadow: black 5px 0 7px;
+  border-radius: 10%;
+}

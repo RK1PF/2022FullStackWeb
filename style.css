@@ -3,16 +3,28 @@
     font-family: 'Poppins', sans-serif;
     --ff-italic: 'Montserrat', sans-serif;
     --clr-primary: #9C060C;
-    --clr-secondary: #610F2A;
+    --clr-secondary: #49222f;
     --clr-accent: #FFA15E;
 }
-body, a {
+html {
+    min-height: 100vh;
+}
+body{
     all: unset;
     background-color: var(--clr-secondary);
     color: var(--clr-accent);
 }
 a {
+    all: unset;
     cursor: pointer;
+}
+footer{
+    bottom: 0;
+}
+header{
+    position: sticky;
+    box-shadow: black 5px 0 1rem;
+    top: 0;
 }
 .container {
     width: 80%;

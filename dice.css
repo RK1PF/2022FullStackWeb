@@ -1,9 +1,0 @@
-:root{
-    --clr-primary: #9C060C;
-    --clr-secondary: #610F2A;
-    --clr-accent: #FFA15E;
-}
-body {
-    background-color: var(--clr-secondary);
-    color: var(--clr-accent);
-}
