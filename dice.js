@@ -23,22 +23,22 @@ function throwDiceOne() {
     // console.log("dice one :",r);
     switch (r) {
         case 0:
-            diceOne.setAttribute("src", "/diceGameSrc/dice1.png");
+            diceOne.setAttribute("src", "./diceGameSrc/dice1.png");
             return r + 1;
         case 1:
-            diceOne.setAttribute("src", "/diceGameSrc/dice2.png");
+            diceOne.setAttribute("src", "./diceGameSrc/dice2.png");
             return r + 1;
             case 2:
-            diceOne.setAttribute("src", "/diceGameSrc/dice3.png");
+            diceOne.setAttribute("src", "./diceGameSrc/dice3.png");
             return r +1;
             case 3:
-            diceOne.setAttribute("src", "/diceGameSrc/dice4.png");
+            diceOne.setAttribute("src", "./diceGameSrc/dice4.png");
             return r +1;
             case 4:
-            diceOne.setAttribute("src", "/diceGameSrc/dice5.png");
+            diceOne.setAttribute("src", "./diceGameSrc/dice5.png");
             return r +1;
             case 5:
-            diceOne.setAttribute("src", "/diceGameSrc/dice6.png");
+            diceOne.setAttribute("src", "./diceGameSrc/dice6.png");
             return r +1;
         default:
             console.log("erreur de throw dice one");
@@ -50,22 +50,22 @@ function throwDiceTwo() {
     // console.log("dice two :",r);
     switch (r) {
         case 0:
-            diceTwo.setAttribute("src", "/diceGameSrc/dice1.png");
+            diceTwo.setAttribute("src", "./diceGameSrc/dice1.png");
             return r + 1;
         case 1:
-            diceTwo.setAttribute("src", "/diceGameSrc/dice2.png");
+            diceTwo.setAttribute("src", "./diceGameSrc/dice2.png");
             return r + 1;
             case 2:
-            diceTwo.setAttribute("src", "/diceGameSrc/dice3.png");
+            diceTwo.setAttribute("src", "./diceGameSrc/dice3.png");
             return r +1;
             case 3:
-            diceTwo.setAttribute("src", "/diceGameSrc/dice4.png");
+            diceTwo.setAttribute("src", "./diceGameSrc/dice4.png");
             return r +1;
             case 4:
-            diceTwo.setAttribute("src", "/diceGameSrc/dice5.png");
+            diceTwo.setAttribute("src", "./diceGameSrc/dice5.png");
             return r +1;
             case 5:
-            diceTwo.setAttribute("src", "/diceGameSrc/dice6.png");
+            diceTwo.setAttribute("src", "./diceGameSrc/dice6.png");
             return r +1;
         default:
             console.log("erreur de throw dice two");
