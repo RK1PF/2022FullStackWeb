@@ -40,3 +40,7 @@
   text-shadow: black 5px 0 7px;
   border-radius: 10%;
 }
+.clicked {
+  opacity: 0.5;
+  
+}
