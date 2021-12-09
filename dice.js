@@ -3,7 +3,6 @@ const btn = document.querySelector('#refreshBtn');
 const winsMsg = document.querySelector('h2');
 const diceOne = document.querySelector('.one img');
 const diceTwo = document.querySelector('.two img');
-// console.log(diceTwo);
 // ajout d'un event listener sur le bouton
 addEventListener('click', e => {
     if (throwDiceOne() > throwDiceTwo()){

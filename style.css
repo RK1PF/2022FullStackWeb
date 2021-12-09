@@ -1,5 +1,5 @@
 :root{
-    /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Poppins:wght@400;700;900&display=swap'); */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Poppins:wght@400;700;900&display=swap');
     font-family: 'Poppins', sans-serif;
     --ff-italic: 'Montserrat', sans-serif;
     --clr-primary: #9C060C;
@@ -7,10 +7,12 @@
     --clr-accent: #FFA15E;
 }
 html {
-    min-height: 100vh;
+    min-height: 100% !important;
 }
 body{
     all: unset;
+    min-height: 100% !important;
+    display: block;
     background-color: var(--clr-secondary);
     color: var(--clr-accent);
 }
