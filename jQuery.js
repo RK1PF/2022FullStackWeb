@@ -46,6 +46,7 @@ function randomTextFromArray() {
     let p = document.createElement("p");
     p.textContent = CodeToPrint;
     $(p).appendTo("#numbers");
+    $(p).fadeIn();
     console.log('bop');
 }
 function reset() {
