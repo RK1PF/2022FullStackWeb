@@ -4,6 +4,7 @@
   color: #FEF2BF;
   text-align: center;
   text-shadow: black 10px 0 10px;
+  margin-bottom: 2em;
 }
 
 .btn {
@@ -43,4 +44,7 @@
 .clicked {
   opacity: 0.5;
   transform: scale(0.9);
+}
+.expand {
+  transform: scale(1.15);
 }
