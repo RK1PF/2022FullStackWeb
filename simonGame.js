@@ -5,21 +5,15 @@ let nextPattern = [];
 let lvl = 0;
 let clickActivated = false;
 let tour = 0;
-$(document).on("keydown", function (e) {
+$("#hider").on("mousedown", function () {
   //event listener sur les touches
-  if (e.key == "a" && lvl === 0) {
     startGame();
-  }
-  if (e.key == "0") {
-    patternAdd();
-  }
 });
 //clique des boutons (fired at every click on any of btns)
 $(btns).on("mousedown", function () {
   // assignation du bouton appuyé à la variable btn
   let btn = $(this).attr("id");
   comparePattern(patternToFollow, btn)
-  console.log(tour);
 
   // animation du clique
   $(this).toggleClass("clicked");
@@ -31,47 +25,46 @@ $(btns).on("mousedown", function () {
 function startGame() {
   //fonction regroupant les changements à opérer lors d'un début de partie
   // lvl 1
-  lvl++;
+  if (lvl >= 1) {
+    animationReset();
+    patternToFollow = [];
+  }
+  lvl = 1;
   animationLvl();
   // lancement du pattern
   patternAdd();
+  $("#hider").toggle();
+  setTimeout(animationPattern,animationTime * 10);
 }
 function gameOver() {
+  $("#hider").toggle();
   //fonction regroupant tout les changements à opérer lors d'un game over
   animationGameOver();
 }
-
-/*FIXME:debug en cours*/
-
 function randomBtn() {
-  let r = btns[Math.floor(Math.random() * btns.length)].getAttribute("id");
-  console.log(r);
-  return r; // retourne l'id d'un bouton aléatoirement
+  return btns[Math.floor(Math.random() * btns.length)].getAttribute("id"); // retourne l'id d'un bouton aléatoirement
 }
 function patternAdd() {
-  let result = patternToFollow.push(randomBtn());
-  console.log(patternToFollow);
+  patternToFollow.push(randomBtn());
 }
-
-/*FIXME:Debug en cours sur la comparaison*/
 
 function comparePattern(patternToFollow, playersInput) {
 
   if (patternToFollow[tour] === playersInput) {
     tour++;
-    console.log("Bon");
     // play du son attribué au btn
     playBtnSound(playersInput)
   } else {
     gameOver();
-    tour = 0;
     playBtnSound("wrong");
+    tour = 0;
   }
   if (tour >= patternToFollow.length) {
     tour = 0;
     lvl++;
     patternAdd();
     animationLvl();
+    setTimeout(animationPattern, animationTime * 10)
   }
 }
 function playBtnSound(btn) {
@@ -118,4 +111,32 @@ function animationGameOver() {
     .fadeIn(animationTime, function () {
       $("#level-title").text("Game Over");
     });
+}
+function animationReset() {
+  $("body")
+    .fadeOut(animationTime, function () {
+      $(this).toggleClass("game-over");
+    })
+    .fadeIn(animationTime, function () {
+      $("#level-title");
+    });
+}
+function animationPattern() {
+  $("#hiderAnimation").toggle();
+  patternToFollow.forEach((e,i) => {
+    setTimeout(()=>{
+      animationBtn(e);
+      playBtnSound(e);
+      if (i+1 === patternToFollow.length) {
+        $("#hiderAnimation").toggle();
+      }
+    }, i * animationTime * 10)
+  });
+}
+function animationBtn(btn){
+    // animation du clique
+    $(`#${btn}`).toggleClass("pressed");
+    setTimeout(() => {
+      $(`#${btn}`).toggleClass("pressed");
+    }, animationTime * 2);
 }
